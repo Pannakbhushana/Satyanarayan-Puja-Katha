@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "../screens/HomeScreen";
+import HomeScreen from "../screens/home/HomeScreen";
+
 
 export type RootStackParamList = {
   Home: undefined;
@@ -16,7 +17,7 @@ export default function RootNavigator() {
           name="Home"
           component={HomeScreen}
           options={{
-            title: "Satyanarayan Puja & Katha",
+            title: "श्री सत्यनारायण पूजा मार्गदर्शिका",
           }}
         />
       </Stack.Navigator>
