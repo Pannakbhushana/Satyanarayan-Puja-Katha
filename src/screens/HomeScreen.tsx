@@ -15,32 +15,37 @@ const MENU_ITEMS = [
   {
     id: "1",
     title: "Puja Vidhi",
-    image: require("../../assets/icons/puja.png"),
+    image: require("../../assets/icons/puja.webp"),
   },
   {
     id: "2",
     title: "Katha",
-    image: require("../../assets/icons/puja.png"),
+    image: require("../../assets/icons/puja.webp"),
   },
   {
     id: "3",
-    title: "Aarti",
-    image: require("../../assets/icons/puja.png"),
+    title: "Havan Vidhi",
+    image: require("../../assets/icons/havan.webp"),
   },
   {
     id: "4",
-    title: "Havan Vidhi",
-    image: require("../../assets/icons/puja.png"),
+    title: "Aarti",
+    image: require("../../assets/icons/puja.webp"),
   },
   {
     id: "5",
-    title: "Samagri List",
-    image: require("../../assets/icons/puja.png"),
+    title: "Stuti",
+    image: require("../../assets/icons/puja.webp"),
   },
   {
     id: "6",
+    title: "Samagri List",
+    image: require("../../assets/icons/puja.webp"),
+  },
+  {
+    id: "7",
     title: "When to Perform",
-    image: require("../../assets/icons/puja.png"),
+    image: require("../../assets/icons/puja.webp"),
   },
 ];
 
@@ -59,7 +64,7 @@ export default function HomeScreen() {
         ListHeaderComponent={
           <View style={styles.heroContainer}>
             <Image
-              source={require("../../assets/banner/satyanarayan.jpg")}
+              source={require("../../assets/banner/satyanarayan.webp")}
               style={styles.heroImage}
               resizeMode="cover"
             />
@@ -90,6 +95,15 @@ export default function HomeScreen() {
             <Text style={styles.cardText}>{item.title}</Text>
           </TouchableOpacity>
         )}
+
+        ListFooterComponent={
+          <View style={styles.footerContainer}>
+            <View style={styles.footerDivider} />
+            <Text style={styles.footerMantra}>
+              ॐ नमो भगवते वासुदेवाय
+            </Text>
+          </View>
+        }
       />
     </SafeAreaView>
   );
@@ -163,6 +177,29 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "600",
     color: "#4E342E",
+    textAlign: "center",
+  },
+
+  /* ---------------- FOOTER SECTION ---------------- */
+
+  footerContainer: {
+    marginTop: 20,
+    paddingVertical: 30,
+    alignItems: "center",
+  },
+
+  footerDivider: {
+    width: 80,
+    height: 2,
+    backgroundColor: "#D4AF37", // soft gold
+    marginBottom: 16,
+    borderRadius: 2,
+  },
+
+  footerMantra: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: "#6D4C41",
     textAlign: "center",
   },
 });
