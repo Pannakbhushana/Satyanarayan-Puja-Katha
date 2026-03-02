@@ -8,13 +8,15 @@ import AartiScreen from "../screens/aarti/AartiScreen";
 import StutiScreen from "../screens/stuti/StutiScreen";
 import SamagriScreen from "../screens/samagri/SamagriScreen";
 import PujaSectionScreen from "../screens/puja/PujaSectionScreen";
+import type { PujaSectionId } from "../data/pujaVidhiContent";
 
 export type RootStackParamList = {
   Home: undefined;
   PujaVidhi: undefined;
   PujaSection: {
-    sectionId: string;
+    sectionId: PujaSectionId;
     title: string;
+    description?: string;
   };
   Katha: undefined;
   HavanVidhi: undefined;

@@ -2,11 +2,18 @@ import React from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { PUJA_CONTENT } from "../../data/pujaVidhiContent";
+import type { NativeStackScreenProps } from "@react-navigation/native-stack";
+import type { RootStackParamList } from "../../navigation/RootNavigator";
 
-export default function PujaSectionScreen({ route }: any) {
+type Props = NativeStackScreenProps<
+  RootStackParamList,
+  "PujaSection"
+>;
+
+export default function PujaSectionScreen({ route }: Props) {
   const { sectionId, title } = route.params;
 
-  const section  = PUJA_CONTENT[sectionId];
+  const section = PUJA_CONTENT[sectionId];
 
   if (!section) return null;
 
@@ -16,28 +23,28 @@ export default function PujaSectionScreen({ route }: any) {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
-        {/* Main Title */}
+        {/* Section Title */}
         <Text style={styles.sectionTitle}>{title}</Text>
-
-        {/* Divider */}
         <View style={styles.divider} />
 
-        {section.items.map((item: any, index: number) => (
+        {section.items.map((item, index) => (
           <View key={index} style={styles.block}>
             {/* Subsection Title */}
             <Text style={styles.subTitle}>{item.title}</Text>
 
-            {/* Mantras */}
-            {item.mantras.map((mantra: string, i: number) => (
-              <Text key={i} style={styles.mantra}>
-                {mantra}
+            {/* Mantra */}
+            <Text style={styles.mantra}>{item.mantra}</Text>
+
+            {/* Optional Instruction */}
+            {item.description && (
+              <Text style={styles.description}>
+                {item.description}
               </Text>
-            ))}
+            )}
           </View>
         ))}
 
-        {/* Bottom spacing */}
-        <View style={{ height: 30 }} />
+        <View style={{ height: 40 }} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -72,24 +79,27 @@ const styles = StyleSheet.create({
   },
 
   block: {
-    marginBottom: 28,
-    backgroundColor: "#FFFFFF",
-    padding: 16,
-    borderRadius: 14,
-    elevation: 3,
+    marginBottom: 30,
   },
 
   subTitle: {
     fontSize: 18,
     fontWeight: "600",
-    marginBottom: 12,
+    marginBottom: 10,
     color: "#3E2723",
   },
 
   mantra: {
-    fontSize: 17,
-    lineHeight: 28,
+    fontSize: 18,
+    lineHeight: 30,
     color: "#F57C00",
-    marginBottom: 8,
+    textAlign: "left",
+    marginBottom: 6,
+  },
+
+  description: {
+    fontSize: 14,
+    lineHeight: 22,
+    color: "#5D4037",
   },
 });
