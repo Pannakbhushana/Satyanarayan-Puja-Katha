@@ -8,10 +8,16 @@ import { MENU_ITEMS } from "../../constants/menuItems";
 import HeroSection from "../../components/home/HeroSection";
 import MenuCard from "../../components/home/MenuCard";
 import Footer from "../../components/home/Footer";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../../navigation/RootNavigator";
+
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 export default function HomeScreen() {
-  const { width } = useWindowDimensions();
+  const navigation = useNavigation<NavigationProp>();
 
+  const { width } = useWindowDimensions();
   let numColumns = 2;
   if (width >= 600) numColumns = 3;
   if (width >= 900) numColumns = 4;
@@ -33,6 +39,7 @@ export default function HomeScreen() {
             title={item.title}
             image={item.image}
             size={cardSize}
+            onPress={() => navigation.navigate(item.route)}
           />
         )}
       />

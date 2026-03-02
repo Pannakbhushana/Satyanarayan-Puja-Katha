@@ -1,9 +1,10 @@
 import { StyleSheet } from "react-native";
+import { COLORS } from "../../constants/colors";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFF8E1",
+    backgroundColor: COLORS.background,
   },
 
   /* ---------------- HERO SECTION ---------------- */
@@ -25,18 +26,18 @@ const styles = StyleSheet.create({
     bottom: 0,
     width: "100%",
     padding: 16,
-    backgroundColor: "rgba(0,0,0,0.35)",
+    backgroundColor: COLORS.overlay,
   },
 
   heroTitle: {
     fontSize: 20,
     fontWeight: "700",
-    color: "#FFF",
+    color: COLORS.white,
   },
 
   heroSubtitle: {
     fontSize: 14,
-    color: "#FFE0B2",
+    color: COLORS.lightAccent,
     marginTop: 4,
   },
 
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
   card: {
     margin: 8,
     borderRadius: 20,
-    backgroundColor: "#FFFBF2",
+    backgroundColor: COLORS.card,
     overflow: "hidden",
     elevation: 5,
   },
@@ -69,9 +70,9 @@ const styles = StyleSheet.create({
 
   titleStrip: {
     height: "20%",
-    backgroundColor: "#faefda",
+    backgroundColor: COLORS.cardStrip,
     borderTopWidth: 1,
-    borderTopColor: "#edd999",
+    borderTopColor: COLORS.cardBorder,
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 8,
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
   cardText: {
     fontSize: 15,
     fontWeight: "600",
-    color: "#4E342E",
+    color: COLORS.primaryText,
     textAlign: "center",
   },
 
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
   footerDivider: {
     width: 80,
     height: 2,
-    backgroundColor: "#D4AF37",
+    backgroundColor: COLORS.gold,
     marginBottom: 16,
     borderRadius: 2,
   },
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
   footerMantra: {
     fontSize: 18,
     fontWeight: "600",
-    color: "#6D4C41",
+    color: COLORS.secondaryText,
     textAlign: "center",
   },
 });

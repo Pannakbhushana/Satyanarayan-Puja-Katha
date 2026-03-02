@@ -7,11 +7,13 @@ interface Props {
   title: string;
   image: any;
   size: number;
+  onPress: () => void;
 }
 
-export default function MenuCard({ title, image, size }: Props) {
+export default function MenuCard({ title, image, size, onPress }: Props) {
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={[
         styles.card,
         { width: size, height: size * 1.1 },
