@@ -16,6 +16,9 @@ export const COLORS = {
   gold: "#D4AF37",
   lightAccent: "#FFE0B2",
 
+  contentText: "#2E1F1A",
+  titleText:"#cc7a00",
+
   // Overlay
   overlay: "rgba(0,0,0,0.35)",
 };

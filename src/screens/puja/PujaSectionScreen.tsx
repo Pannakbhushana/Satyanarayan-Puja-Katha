@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { PUJA_CONTENT } from "../../data/pujaVidhiContent";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import type { RootStackParamList } from "../../navigation/RootNavigator";
+import {styles} from "./PujaSection.style";
 
 type Props = NativeStackScreenProps<
   RootStackParamList,
@@ -49,57 +50,3 @@ export default function PujaSectionScreen({ route }: Props) {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#FFF8E1",
-  },
-
-  content: {
-    paddingHorizontal: 20,
-    paddingTop: 10,
-  },
-
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: "bold",
-    textAlign: "center",
-    marginBottom: 10,
-    color: "#3E2723",
-  },
-
-  divider: {
-    height: 2,
-    width: 60,
-    backgroundColor: "#F57C00",
-    alignSelf: "center",
-    marginBottom: 25,
-    borderRadius: 2,
-  },
-
-  block: {
-    marginBottom: 30,
-  },
-
-  subTitle: {
-    fontSize: 18,
-    fontWeight: "600",
-    marginBottom: 10,
-    color: "#3E2723",
-  },
-
-  mantra: {
-    fontSize: 18,
-    lineHeight: 30,
-    color: "#F57C00",
-    textAlign: "left",
-    marginBottom: 6,
-  },
-
-  description: {
-    fontSize: 14,
-    lineHeight: 22,
-    color: "#5D4037",
-  },
-});
