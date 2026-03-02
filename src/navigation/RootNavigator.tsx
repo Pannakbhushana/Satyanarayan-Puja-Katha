@@ -7,11 +7,15 @@ import HavanVidhiScreen from "../screens/havan/HavanVidhiScreen";
 import AartiScreen from "../screens/aarti/AartiScreen";
 import StutiScreen from "../screens/stuti/StutiScreen";
 import SamagriScreen from "../screens/samagri/SamagriScreen";
-
+import PujaSectionScreen from "../screens/puja/PujaSectionScreen";
 
 export type RootStackParamList = {
   Home: undefined;
   PujaVidhi: undefined;
+  PujaSection: {
+    sectionId: string;
+    title: string;
+  };
   Katha: undefined;
   HavanVidhi: undefined;
   Aarti: undefined;
@@ -32,7 +36,7 @@ export default function RootNavigator() {
             title: "श्री सत्यनारायण पूजा मार्गदर्शिका",
           }}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="PujaVidhi"
           component={PujaVidhiScreen}
           options={{ title: "पूजा विधि" }}
@@ -66,6 +70,13 @@ export default function RootNavigator() {
           name="Samagri"
           component={SamagriScreen}
           options={{ title: "सामग्री सूची" }}
+        />
+        <Stack.Screen
+          name="PujaSection"
+          component={PujaSectionScreen}
+          options={({ route }) => ({
+            title: route.params?.title ?? "पूजा चरण",
+          })}
         />
       </Stack.Navigator>
     </NavigationContainer>
