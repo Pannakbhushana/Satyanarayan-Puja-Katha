@@ -20,7 +20,7 @@ const MENU_ITEMS = [
   {
     id: "2",
     title: "Katha",
-    image: require("../../assets/icons/puja.webp"),
+    image: require("../../assets/icons/katha.webp"),
   },
   {
     id: "3",
@@ -30,22 +30,17 @@ const MENU_ITEMS = [
   {
     id: "4",
     title: "Aarti",
-    image: require("../../assets/icons/puja.webp"),
+    image: require("../../assets/icons/aarti.webp"),
   },
   {
     id: "5",
     title: "Stuti",
-    image: require("../../assets/icons/puja.webp"),
+    image: require("../../assets/icons/stuti.webp"),
   },
   {
     id: "6",
     title: "Samagri List",
-    image: require("../../assets/icons/puja.webp"),
-  },
-  {
-    id: "7",
-    title: "When to Perform",
-    image: require("../../assets/icons/puja.webp"),
+    image: require("../../assets/icons/samagri.webp"),
   },
 ];
 
@@ -83,16 +78,28 @@ export default function HomeScreen() {
         numColumns={numColumns}
         contentContainerStyle={styles.listContainer}
         keyExtractor={(item) => item.id}
+
         renderItem={({ item }) => (
           <TouchableOpacity
             style={[
               styles.card,
-              { width: cardSize, height: cardSize * 1.05 },
+              { width: cardSize, height: cardSize * 1.1 },
             ]}
-            activeOpacity={0.85}
+            activeOpacity={0.9}
           >
-            <Image source={item.image} style={styles.cardImage} />
-            <Text style={styles.cardText}>{item.title}</Text>
+            {/* IMAGE SECTION (90%) */}
+            <View style={styles.imageContainer}>
+              <Image
+                source={item.image}
+                style={styles.cardImage}
+                resizeMode="contain"
+              />
+            </View>
+
+            {/* TITLE STRIP (10%) */}
+            <View style={styles.titleStrip}>
+              <Text style={styles.cardText}>{item.title}</Text>
+            </View>
           </TouchableOpacity>
         )}
 
@@ -157,28 +164,41 @@ const styles = StyleSheet.create({
   },
 
   card: {
-    margin: 6,
-    borderRadius: 18,
-    backgroundColor: "#FFFFFF",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 16,
-    elevation: 4,
-  },
+  margin: 8,
+  borderRadius: 20,
+  backgroundColor: "#FFFBF2",
+  overflow: "hidden", // important
+  elevation: 5,
+},
 
-  cardImage: {
-    width: 60,
-    height: 60,
-    marginBottom: 12,
-    resizeMode: "contain",
-  },
+imageContainer: {
+  height: "80%",   // 80% image
+  justifyContent: "center",
+  alignItems: "center",
+  padding: 12,
+},
 
-  cardText: {
-    fontSize: 15,
-    fontWeight: "600",
-    color: "#4E342E",
-    textAlign: "center",
-  },
+cardImage: {
+  width: "90%",
+  height: "90%",
+},
+
+titleStrip: {
+  height: "20%",   // 20% title
+  backgroundColor: "#faefda",
+  borderTopWidth: 1,
+  borderTopColor: "#edd999",
+  justifyContent: "center",
+  alignItems: "center",
+  paddingHorizontal: 8,
+},
+
+cardText: {
+  fontSize: 15,
+  fontWeight: "600",
+  color: "#4E342E",
+  textAlign: "center",
+},
 
   /* ---------------- FOOTER SECTION ---------------- */
 
