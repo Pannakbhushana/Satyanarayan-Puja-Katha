@@ -37,15 +37,21 @@ export const MENU_ITEMS : {
     route: "Stuti"
   },
   {
-    id: "5",
+    id: "6",
     title: "पूर्णता एवं विसर्जन",
     image: require("../../assets/icons/stuti.webp"),
-    route: "Stuti"
+    route: "Visarjan"
   },
   {
-    id: "6",
+    id: "7",
     title: "सामग्री सूची",
     image: require("../../assets/icons/samagri.webp"),
     route: "Samagri"
+  },
+  {
+    id: "8",
+    title: "कब करें पूजा?",
+    image: require("../../assets/icons/samagri.webp"),
+    route: "WhenToPerform"
   },
 ];

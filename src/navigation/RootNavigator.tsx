@@ -11,6 +11,8 @@ import PujaSectionScreen from "../screens/puja/PujaSectionScreen";
 import type { PujaSectionId } from "../data/pujaVidhiContent";
 import KathaSectionScreen from "../screens/katha/KathaSectionScreen";
 import type { KathaChapterId } from "../data/kathaContent";
+import VisarjanScreen from "../screens/visarjan/VisarjanScreen";
+import WhenToPerformScreen from "../screens/when-to-perform/WhenToPerformScreen";
 
 export type RootStackParamList = {
   Home: undefined;
@@ -28,6 +30,8 @@ export type RootStackParamList = {
   Aarti: undefined;
   Stuti: undefined;
   Samagri: undefined;
+  Visarjan: undefined;
+  WhenToPerform:undefined
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -83,6 +87,17 @@ export default function RootNavigator() {
           name="Samagri"
           component={SamagriScreen}
           options={{ title: "सामग्री सूची" }}
+        />
+
+        <Stack.Screen
+          name="Visarjan"
+          component={VisarjanScreen}
+          options={{ title: "पूर्णता एवं विसर्जन" }}
+        />
+        <Stack.Screen
+          name="WhenToPerform"
+          component={WhenToPerformScreen}
+          options={{ title: "कब करें पूजा?" }}
         />
         <Stack.Screen
           name="PujaSection"
