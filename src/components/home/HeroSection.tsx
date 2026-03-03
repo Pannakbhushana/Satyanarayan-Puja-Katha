@@ -1,11 +1,16 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Image, useWindowDimensions, Text } from "react-native";
 import styles from "../../screens/home/HomeScreen.styles";
 
 
-export default function HeroSection() {
+export default function HeroBanner() {
+  const { width } = useWindowDimensions();
+
+  const containerWidth =
+    width > 1000 ? 900 : width - 24; // padding safe
+
   return (
-    <View style={styles.heroContainer}>
+    <View style={[styles.heroWrapper, { width: containerWidth }]}>
       <Image
         source={require("../../../assets/banner/satyanarayan.webp")}
         style={styles.heroImage}

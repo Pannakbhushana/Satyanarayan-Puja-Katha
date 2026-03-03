@@ -8,7 +8,7 @@ export const MENU_ITEMS : {
 }[] = [
   {
     id: "1",
-    title: "पूजा विधि",
+    title: "पूजन मंत्रावली",
     image: require("../../assets/icons/puja.webp"),
     route: "PujaVidhi"
   },

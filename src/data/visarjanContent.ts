@@ -24,7 +24,7 @@ export const VISARJAN_CONTENT: VisarjanContent = {
       `,
     },
     {
-      title: "विसर्जन मंत्र",
+      title: "विसर्जन",
       mantra: `
 यान्तु देवगणाः सर्वे पूजामादाय मामकीम्।
 इष्टकामसमृद्ध्यर्थं पुनरागमनाय च॥

@@ -9,16 +9,18 @@ const styles = StyleSheet.create({
 
   /* ---------------- HERO SECTION ---------------- */
 
-  heroContainer: {
-    margin: 12,
+heroWrapper: {
+    alignSelf: "center",
     borderRadius: 20,
     overflow: "hidden",
     elevation: 6,
+    aspectRatio: 3 / 2,   // 🔥 Exact match to image
+    marginVertical: 12,
   },
 
   heroImage: {
     width: "100%",
-    height: 220,
+    height: "100%",
   },
 
   overlay: {
