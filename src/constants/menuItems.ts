@@ -39,7 +39,7 @@ export const MENU_ITEMS : {
   {
     id: "6",
     title: "पूर्णता एवं विसर्जन",
-    image: require("../../assets/icons/stuti.webp"),
+    image: require("../../assets/icons/visarjan.webp"),
     route: "Visarjan"
   },
   {
@@ -51,7 +51,7 @@ export const MENU_ITEMS : {
   {
     id: "8",
     title: "कब करें पूजा?",
-    image: require("../../assets/icons/samagri.webp"),
+    image: require("../../assets/icons/kab-kare-puja.webp"),
     route: "WhenToPerform"
   },
 ];
