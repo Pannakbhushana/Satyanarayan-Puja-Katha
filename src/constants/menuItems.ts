@@ -37,6 +37,12 @@ export const MENU_ITEMS : {
     route: "Stuti"
   },
   {
+    id: "5",
+    title: "पूर्णता एवं विसर्जन",
+    image: require("../../assets/icons/stuti.webp"),
+    route: "Stuti"
+  },
+  {
     id: "6",
     title: "सामग्री सूची",
     image: require("../../assets/icons/samagri.webp"),
