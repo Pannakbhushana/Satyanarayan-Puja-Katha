@@ -53,4 +53,12 @@ export const styles = StyleSheet.create({
     lineHeight: 22,
     color: COLORS.secondaryText,
   },
+
+  kathaText: {
+  fontSize: 18,
+  lineHeight: 32,
+  color: COLORS.contentText,
+  textAlign: "left",
+  letterSpacing: 0.3,
+},
 });

@@ -9,6 +9,8 @@ import StutiScreen from "../screens/stuti/StutiScreen";
 import SamagriScreen from "../screens/samagri/SamagriScreen";
 import PujaSectionScreen from "../screens/puja/PujaSectionScreen";
 import type { PujaSectionId } from "../data/pujaVidhiContent";
+import KathaSectionScreen from "../screens/katha/KathaSectionScreen";
+import type { KathaChapterId } from "../data/kathaContent";
 
 export type RootStackParamList = {
   Home: undefined;
@@ -19,6 +21,9 @@ export type RootStackParamList = {
     description?: string;
   };
   Katha: undefined;
+  KathaSection: {
+    chapterId: KathaChapterId;
+  };
   HavanVidhi: undefined;
   Aarti: undefined;
   Stuti: undefined;
@@ -47,7 +52,13 @@ export default function RootNavigator() {
         <Stack.Screen
           name="Katha"
           component={KathaScreen}
-          options={{ title: "कथा" }}
+          options={{ title: "सत्यनारायण कथा" }}
+        />
+
+        <Stack.Screen
+          name="KathaSection"
+          component={KathaSectionScreen}
+          options={{ title: "सत्यनारायण कथा" }}
         />
 
         <Stack.Screen
