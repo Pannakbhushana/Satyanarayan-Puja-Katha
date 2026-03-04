@@ -11,6 +11,7 @@ import Footer from "../../components/home/Footer";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../navigation/RootNavigator";
+import EcosystemCard from "../../components/home/EcosystemCard";
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
@@ -28,7 +29,10 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <FlatList
         ListHeaderComponent={<HeroSection />}
-        ListFooterComponent={<Footer />}
+        ListFooterComponent={<>
+          <EcosystemCard />
+          <Footer />
+        </>}
         data={MENU_ITEMS}
         key={numColumns}
         numColumns={numColumns}
@@ -39,7 +43,7 @@ export default function HomeScreen() {
             title={item.title}
             image={item.image}
             size={cardSize}
-            onPress={() => navigation.navigate(item.route)}
+            onPress={() => navigation.navigate(item.route as any)}
           />
         )}
       />

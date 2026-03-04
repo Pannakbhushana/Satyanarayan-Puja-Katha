@@ -109,6 +109,30 @@ heroWrapper: {
     color: COLORS.secondaryText,
     textAlign: "center",
   },
+
+    /* ---------------- ECOSYSTEM CARD ---------------- */
+
+  ecosystemCard: {
+  marginHorizontal: 16,
+  marginTop: 24,
+  paddingVertical: 18,
+  borderRadius: 16,
+  backgroundColor: "#FFF3E0",
+  alignItems: "center",
+  elevation: 3,
+},
+
+ecosystemTitle: {
+  fontSize: 18,
+  fontWeight: "700",
+  color: "#BF360C",
+},
+
+ecosystemSubtitle: {
+  marginTop: 6,
+  fontSize: 14,
+  color: "#6D4C41",
+},
 });
 
 export default styles;
