@@ -55,10 +55,33 @@ export const styles = StyleSheet.create({
   },
 
   kathaText: {
-  fontSize: 18,
-  lineHeight: 32,
-  color: COLORS.contentText,
-  textAlign: "left",
-  letterSpacing: 0.3,
-},
+    fontSize: 18,
+    lineHeight: 32,
+    color: COLORS.contentText,
+    textAlign: "left",
+    letterSpacing: 0.3,
+  },
+
+  navigationContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 40,
+    gap: 12,
+  },
+  
+  navButton: {
+    backgroundColor: COLORS.stepButtonBg,
+    borderWidth: 1,
+    borderColor: COLORS.stepButtonBorder,
+    paddingVertical: 12,
+    paddingHorizontal: 18,
+    borderRadius: 12,
+  },
+
+  navText: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: COLORS.stepButtonText,
+  },
 });
